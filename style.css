@@ -1,0 +1,148 @@
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);    
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background-color: var(--Light-grayish-blue);
+}
+
+h1 {
+    font-size: 14px;
+}
+
+h2 {
+    font-size: 17px;
+}
+
+/* main container  */
+.container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+    width: 90%;
+    margin: auto;
+    max-width: 1150px;
+}
+
+.col {
+    background-color: var(--White);
+    padding: 2rem;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.daniel, .jonathan, .patrick {
+    color: var(--Light-gray);
+}
+
+.pos {
+    opacity: 0.5;
+}
+
+.dis {
+    opacity: .7;
+}
+
+.daniel {
+    grid-area: daniel;
+    background-color: var(--Moderate-violet);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-position: top right 9vh;
+    background-repeat: no-repeat;
+}
+
+.jonathan {
+    grid-area: jonathan;
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.jenette {
+    grid-area: jeanette;
+}
+
+.patrick {
+    grid-area: patrick;
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.kira {
+    grid-area: kira;
+}
+
+/* for profile picture  */
+img {
+    border-radius: 50%;
+    width: 30px;
+}
+
+.name-block {
+    margin-left: 1rem;
+}
+
+.col-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+/* title  */
+.title {
+    padding: 0.5rem 0;
+}
+
+.daniel .title, .jonathan .title, .patrick .title {
+    color: var(--White)
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 1000px) {
+    .container {
+        margin: 2rem 0;
+        grid-template-areas: 
+        "daniel" 
+        "daniel" 
+        "jonathan"
+        "jeanette" 
+        "patrick" 
+        "patrick" 
+        "kira"
+        "kira";
+    }
+
+    .col {
+        width: 370px;
+    }
+}
